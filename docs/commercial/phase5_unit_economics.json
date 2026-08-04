@@ -1,0 +1,119 @@
+{
+  "model_version": "phase5_unit_economics_v1",
+  "recorded_at": "2026-08-04",
+  "currency": "USD",
+  "status": "cost_derived_pricing_hypothesis_not_demand_validated",
+  "source_boundary": {
+    "framework_baseline": "Anil-matcha/Open-AI-Design-Agent",
+    "creative_lab_code_or_data_used": false
+  },
+  "observed_costs": {
+    "sample_count": 1,
+    "muapi_generation_request_usd": 0.09,
+    "generation_requests_observed": 2,
+    "successful_assets_observed": 1,
+    "charged_timeout_requests_observed": 1,
+    "openai_judge_estimated_usd": 0.007741,
+    "judge_input_tokens": 6745,
+    "judge_output_tokens": 596,
+    "warning": "The sample is sufficient for an auditable initial cost model, not for estimating a stable production average."
+  },
+  "cost_scenarios": {
+    "verified_asset_first_pass_usd": 0.097741,
+    "verified_asset_one_correction_usd": 0.195482,
+    "verified_asset_three_attempt_cap_usd": 0.293223,
+    "three_market_campaign_first_pass_usd": 0.293223,
+    "three_market_campaign_three_attempt_cap_usd": 0.879669
+  },
+  "anchor_credit_policy": {
+    "reserve_usd_per_credit": 0.01,
+    "rounding": "ceil_each_provider_action",
+    "generation_request_credits": 9,
+    "judge_request_credits": 1,
+    "verified_asset_first_pass_credits": 10,
+    "verified_asset_three_attempt_cap_credits": 30,
+    "three_market_campaign_first_pass_credits": 30,
+    "three_market_campaign_three_attempt_cap_credits": 90,
+    "settlement": "Reserve the displayed upper bound before approval; settle against provider-reported actual cost and refund only when the provider reports a refund or no charge.",
+    "boundary": "Anchor Credits are an internal hosted-product budget unit and are not asserted to equal MuAPI's upstream credits."
+  },
+  "packages": [
+    {
+      "id": "sandbox",
+      "availability": "launch",
+      "price_usd": 0.0,
+      "billing_period": "one_time_onboarding",
+      "included_anchor_credits": 20,
+      "maximum_provider_reserve_usd": 0.2,
+      "maximum_markets_per_campaign": 1,
+      "consistency_judge": false,
+      "automatic_correction": false,
+      "positioning": "Two low-cost draft generations for product fit testing; abuse-controlled and not a recurring free allowance."
+    },
+    {
+      "id": "pro",
+      "availability": "launch_hypothesis",
+      "price_usd": 29.0,
+      "billing_period": "monthly",
+      "included_anchor_credits": 1200,
+      "maximum_provider_reserve_usd": 12.0,
+      "variable_cost_gross_profit_usd": 17.0,
+      "variable_cost_gross_margin": 0.586207,
+      "maximum_markets_per_campaign": 3,
+      "consistency_judge": true,
+      "automatic_correction": true,
+      "capacity_examples": {
+        "first_pass_verified_assets": 120,
+        "three_attempt_cap_verified_assets": 40,
+        "first_pass_three_market_campaigns": 40,
+        "three_attempt_cap_three_market_campaigns": 13
+      },
+      "positioning": "Primary offer for a small cross-border e-commerce creative team."
+    },
+    {
+      "id": "team",
+      "availability": "post_mvp_hypothesis",
+      "price_usd": 79.0,
+      "billing_period": "monthly",
+      "included_anchor_credits": 3600,
+      "maximum_provider_reserve_usd": 36.0,
+      "variable_cost_gross_profit_usd": 43.0,
+      "variable_cost_gross_margin": 0.544304,
+      "maximum_markets_per_campaign": 3,
+      "consistency_judge": true,
+      "automatic_correction": true,
+      "requires_unbuilt_features": [
+        "shared_workspace",
+        "role_based_approval",
+        "team_usage_reporting"
+      ],
+      "positioning": "Do not sell until the listed collaboration capabilities exist."
+    },
+    {
+      "id": "credit_pack",
+      "availability": "launch_hypothesis",
+      "price_usd": 9.9,
+      "billing_period": "one_time",
+      "included_anchor_credits": 350,
+      "maximum_provider_reserve_usd": 3.5,
+      "variable_cost_gross_profit_usd": 6.4,
+      "variable_cost_gross_margin": 0.646465,
+      "positioning": "Usage extension without forcing a subscription upgrade."
+    }
+  ],
+  "unmodeled_costs": [
+    "payment_processing",
+    "hosting_and_storage",
+    "observability_and_support",
+    "taxes_and_refunds",
+    "customer_acquisition",
+    "provider_price_changes",
+    "fraud_and_free_tier_abuse"
+  ],
+  "claim_limits": [
+    "No package has been tested with paying users.",
+    "No revenue, conversion, retention, or willingness-to-pay result is claimed.",
+    "Gross margin includes only the maximum variable AI-provider reserve and is not contribution margin or operating profit.",
+    "Judge trust and localized output quality remain unvalidated at scale."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "stage": 4,
+  "recorded_at": "2026-08-04",
+  "status": "implementation_complete_local_verification_passed_live_multimarket_generation_deferred",
+  "source_boundary": {
+    "framework_baseline": "Anil-matcha/Open-AI-Design-Agent",
+    "creative_lab_code_or_data_used": false
+  },
+  "preset_version": "market_presets_v1",
+  "preset_reviewed_on": "2026-08-04",
+  "curated_markets": [
+    {"market_code": "US", "default_locale": "en-US", "text_direction": "ltr"},
+    {"market_code": "DE", "default_locale": "de-DE", "text_direction": "ltr"},
+    {"market_code": "JP", "default_locale": "ja-JP", "text_direction": "ltr"},
+    {"market_code": "KR", "default_locale": "ko-KR", "text_direction": "ltr"},
+    {"market_code": "AE", "default_locale": "ar-AE", "text_direction": "rtl"}
+  ],
+  "campaign_market_limit": 3,
+  "completed": [
+    "Versioned deterministic market presets",
+    "Per-market copy and visual guidance",
+    "Arabic RTL layout instructions without mirroring product images or logos",
+    "Publication-review prompts backed by public regulator or government sources",
+    "Unknown-market generic fallback with visible warning",
+    "Duplicate-market rejection",
+    "No-invented-price-discount-certification-performance rule",
+    "LocalizationPlan injection into the existing agent message",
+    "Nontechnical curated market selector",
+    "Localized review table persisted with the campaign message"
+  ],
+  "verification": {
+    "backend_tests_passed": 38,
+    "backend_tests_failed": 0,
+    "design_agent_component_build": "passed",
+    "nextjs_production_build": "passed",
+    "paid_generation_calls": 0,
+    "paid_judge_calls": 0,
+    "implementation_spend_usd": 0
+  },
+  "claims": {
+    "localization_layer_implemented": true,
+    "live_multimarket_output_quality_validated": false,
+    "automated_legal_clearance": false,
+    "judge_trusted": false
+  },
+  "deferred": [
+    "Paid real multi-market generation",
+    "Human review of generated localized copy and layouts",
+    "Large-sample market and consistency evaluation"
+  ],
+  "artifacts": {
+    "phase_document": "docs/PHASE4_MARKET_LOCALIZATION.md",
+    "market_presets": "server/app/services/market_localization.py",
+    "automated_tests": "server/tests/test_market_localization.py"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "stage": 6,
+  "recorded_at": "2026-08-04",
+  "status": "protocol_and_sources_frozen_collection_not_started",
+  "protocol_version": "phase6_protocol_v1",
+  "sample_design": {
+    "product_slots": 12,
+    "markets": ["US", "DE", "JP", "KR", "AE"],
+    "sample_count": 60,
+    "human_raters": 2,
+    "first_completed_generation_only": true,
+    "calibration_sample_excluded": true
+  },
+  "completed": [
+    "Stable 60-sample ID scheme",
+    "Market, campaign-type, and logo-condition allocation",
+    "Two-rater blind scoring protocol",
+    "Frozen logo_hard_gate_v2 scoring policy",
+    "Primary and clustered statistical analysis plan",
+    "Zero-dollar execution gate",
+    "Formula-driven evaluator workbook",
+    "Twelve public product sources selected and license-checked",
+    "Eight Logo sources selected, license-checked, and assigned",
+    "All twenty evaluation assets downloaded, decoded, and visually reviewed",
+    "Copyright and trademark boundaries recorded separately"
+  ],
+  "verification": {
+    "backend_tests_passed": 28,
+    "backend_tests_failed": 0,
+    "freeze_json_valid": true,
+    "source_catalog_json_valid": true,
+    "product_sources_verified": 12,
+    "logo_sources_verified": 8,
+    "source_downloads_and_decodes_passed": 20,
+    "source_visual_reviews_passed": 20,
+    "workbook_formula_errors": 0,
+    "workbook_sheets_visually_checked": 8
+  },
+  "artifacts": {
+    "protocol": "docs/PHASE6_EVALUATION_PROTOCOL.md",
+    "machine_readable_freeze": "docs/evaluation/phase6_evaluation_freeze.json",
+    "public_source_catalog": "docs/evaluation/phase6_public_sources.json",
+    "public_source_audit": "docs/PHASE6_PUBLIC_SOURCE_AUDIT.md",
+    "evaluator_workbook": "outputs/019fc78b-217c-7ac2-a89c-d6691dbc81b4/AnchorReach_Phase6_Evaluation.xlsx"
+  },
+  "pending": [
+    "Explicit paid execution approval",
+    "60 first-attempt generations",
+    "Two locked human rating passes",
+    "60 independent model judge reports",
+    "Inter-rater and human-vs-model statistical report",
+    "Final Phase-6 evidence package"
+  ],
+  "financial_status": {
+    "paid_calls_authorized": false,
+    "spend_for_protocol_freeze_usd": 0,
+    "spend_for_source_selection_and_verification_usd": 0,
+    "estimated_base_execution_cost_usd": 5.86446,
+    "recommended_future_cap_usd": [6.5, 7.0]
+  },
+  "claims": {
+    "judge_trusted": false,
+    "reason": "The protocol is frozen, but no Phase-6 holdout human/model score pairs exist yet."
+  }
+}

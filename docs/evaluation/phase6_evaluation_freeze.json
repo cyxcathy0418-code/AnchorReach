@@ -1,0 +1,79 @@
+{
+  "freeze_version": "phase6_protocol_v1",
+  "frozen_at": "2026-08-04",
+  "status": "design_frozen_sources_verified_collection_pending",
+  "sample_count": 60,
+  "design": {
+    "product_slots": 12,
+    "markets": 5,
+    "full_factorial": true,
+    "sample_id_pattern": "AR-P{product_slot_2d}-{market_code}",
+    "generation_attempt_policy": "first_completed_generation_only",
+    "calibration_sample_excluded": "wikimedia-bottle-sg-social-v1"
+  },
+  "markets": [
+    {"market_code": "US", "language": "en", "label": "United States / English", "direction": "ltr"},
+    {"market_code": "DE", "language": "de", "label": "Germany / German", "direction": "ltr"},
+    {"market_code": "JP", "language": "ja", "label": "Japan / Japanese", "direction": "ltr"},
+    {"market_code": "KR", "language": "ko", "label": "South Korea / Korean", "direction": "ltr"},
+    {"market_code": "AE", "language": "ar", "label": "United Arab Emirates / Arabic", "direction": "rtl"}
+  ],
+  "product_slots": [
+    {"product_slot": "P01", "category": "reusable_bottle", "campaign_type": "poster", "logo_condition": "present"},
+    {"product_slot": "P02", "category": "skin_care_bottle", "campaign_type": "poster", "logo_condition": "present"},
+    {"product_slot": "P03", "category": "wireless_earbuds", "campaign_type": "poster", "logo_condition": "present"},
+    {"product_slot": "P04", "category": "running_shoe", "campaign_type": "poster", "logo_condition": "present"},
+    {"product_slot": "P05", "category": "backpack", "campaign_type": "social_post", "logo_condition": "present"},
+    {"product_slot": "P06", "category": "wristwatch", "campaign_type": "social_post", "logo_condition": "present"},
+    {"product_slot": "P07", "category": "coffee_maker", "campaign_type": "social_post", "logo_condition": "present"},
+    {"product_slot": "P08", "category": "snack_package", "campaign_type": "social_post", "logo_condition": "present"},
+    {"product_slot": "P09", "category": "camera", "campaign_type": "ad_banner", "logo_condition": "absent"},
+    {"product_slot": "P10", "category": "desk_lamp", "campaign_type": "ad_banner", "logo_condition": "absent"},
+    {"product_slot": "P11", "category": "hand_tool", "campaign_type": "ad_banner", "logo_condition": "absent"},
+    {"product_slot": "P12", "category": "perfume_bottle", "campaign_type": "ad_banner", "logo_condition": "absent"}
+  ],
+  "human_evaluation": {
+    "rater_count": 2,
+    "blind_to_model_scores": true,
+    "independent_until_scores_locked": true,
+    "aggregation": "dimension_wise_arithmetic_mean_after_each_rater_policy_adjustment",
+    "inter_rater_metrics_required": ["pearson", "spearman", "mean_absolute_difference"]
+  },
+  "judge_validation": {
+    "primary_metrics": ["pearson", "spearman"],
+    "trust_threshold_exclusive": 0.8,
+    "minimum_samples": 20,
+    "primary_analysis": "all_60_samples",
+    "uncertainty_analysis": "product_cluster_bootstrap_95_percent_ci",
+    "market_analysis": "secondary_descriptive_only_unless_20_products_per_market"
+  },
+  "scoring_policy": {
+    "version": "logo_hard_gate_v2",
+    "weights": {"product_appearance": 0.5, "logo_reference": 0.3, "color_palette": 0.2},
+    "absent_logo_normalization": true,
+    "pass_threshold": 80,
+    "minimum_dimension_score": 60,
+    "logo_hard_failure_score_cap": 59
+  },
+  "financial_gate": {
+    "paid_calls_authorized": false,
+    "estimated_base_cost_usd": 5.86446,
+    "recommended_future_cap_usd_low": 6.5,
+    "recommended_future_cap_usd_high": 7.0,
+    "require_explicit_user_approval_before_any_paid_call": true
+  },
+  "source_policy": {
+    "public_samples_only": true,
+    "creative_lab_code_or_data_allowed": false,
+    "framework_baseline": "Anil-matcha/Open-AI-Design-Agent",
+    "source_url_and_license_required_before_generation": true,
+    "source_catalog": "docs/evaluation/phase6_public_sources.json",
+    "source_audit": "docs/PHASE6_PUBLIC_SOURCE_AUDIT.md",
+    "verified_at": "2026-08-04",
+    "product_sources_verified": 12,
+    "logo_sources_verified": 8,
+    "evaluation_urls_downloaded_and_decoded": true,
+    "trademark_bearing_assets_local_evaluation_only": true,
+    "commercial_or_publication_clearance_claimed": false
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "generated_at": "2026-08-03T12:39:31.312303Z",
+  "source": "POST /api/v1/anchor-reach/structured-input via FastAPI TestClient",
+  "creative_lab_code_or_data_used": false,
+  "normal_paths": [
+    {
+      "case": "normal_wireless_earbuds",
+      "status_code": 200,
+      "request": {
+        "product": {
+          "category": "wireless earbuds",
+          "core_selling_points": [
+            "durable construction",
+            "designed for daily use"
+          ],
+          "images": [
+            "tests/fixtures/blue.ppm"
+          ],
+          "brand_name": "Northstar",
+          "logo_url": "tests/fixtures/green.ppm",
+          "primary_color": "#2455B4"
+        },
+        "target_markets": [
+          {
+            "market_code": "SG",
+            "language": "en"
+          },
+          {
+            "market_code": "DE",
+            "language": "de"
+          }
+        ],
+        "campaign_type": "poster"
+      },
+      "response": {
+        "structured_input": {
+          "product": {
+            "category": "wireless earbuds",
+            "core_selling_points": [
+              "durable construction",
+              "designed for daily use"
+            ],
+            "images": [
+              "tests/fixtures/blue.ppm"
+            ],
+            "brand_name": "Northstar",
+            "logo_url": "tests/fixtures/green.ppm",
+            "primary_color": "#2455B4"
+          },
+          "target_markets": [
+            {
+              "market_code": "SG",
+              "language": "en"
+            },
+            {
+              "market_code": "DE",
+              "language": "de"
+            }
+          ],
+          "campaign_type": "poster"
+        },
+        "anchor_block": {
+          "visual_anchors": {
+            "product_appearance": "Northstar wireless earbuds. Preserve the exact silhouette, proportions, surface details, packaging geometry, and visible brand markings shown in 1 decoded product reference image(s). reference 1: PPM, 4x4, RGB, opaque, dominant colors #2355B4, #B4D7FA.",
+            "logo_reference": "tests/fixtures/green.ppm",
+            "color_palette": [
+              "#2455B4"
+            ]
+          },
+          "locked_attributes": [
+            "product_appearance",
+            "logo_reference",
+            "color_palette"
+          ],
+          "extraction_metadata": {
+            "source_images_used": [
+              "tests/fixtures/blue.ppm"
+            ],
+            "color_source": "primary_color_field",
+            "extraction_timestamp": "2026-08-03T12:39:31.324136Z",
+            "appearance_extraction_method": "deterministic_image_metadata"
+          }
+        },
+        "warnings": [],
+        "agent_message": "You are running the AnchorReach structured campaign workflow. Create one static poster concept for each requested market: SG (en), DE (de). This phase does not apply market-specific style presets; treat market and language as explicit routing context only. Produce static image assets only. The AnchorBlock below is the source of truth: every attribute listed in locked_attributes must remain unchanged. Do not invent a logo when logo_reference is null. Use the product reference images when generating.\n\nSTRUCTURED_CAMPAIGN_INPUT:\n{\n  \"product\": {\n    \"category\": \"wireless earbuds\",\n    \"core_selling_points\": [\n      \"durable construction\",\n      \"designed for daily use\"\n    ],\n    \"images\": [\n      \"tests/fixtures/blue.ppm\"\n    ],\n    \"brand_name\": \"Northstar\",\n    \"logo_url\": \"tests/fixtures/green.ppm\",\n    \"primary_color\": \"#2455B4\"\n  },\n  \"target_markets\": [\n    {\n      \"market_code\": \"SG\",\n      \"language\": \"en\"\n    },\n    {\n      \"market_code\": \"DE\",\n      \"language\": \"de\"\n    }\n  ],\n  \"campaign_type\": \"poster\"\n}\n\nANCHOR_BLOCK:\n{\n  \"visual_anchors\": {\n    \"product_appearance\": \"Northstar wireless earbuds. Preserve the exact silhouette, proportions, surface details, packaging geometry, and visible brand markings shown in 1 decoded product reference image(s). reference 1: PPM, 4x4, RGB, opaque, dominant colors #2355B4, #B4D7FA.\",\n    \"logo_reference\": \"tests/fixtures/green.ppm\",\n    \"color_palette\": [\n      \"#2455B4\"\n    ]\n  },\n  \"locked_attributes\": [\n    \"product_appearance\",\n    \"logo_reference\",\n    \"color_palette\"\n  ],\n  \"extraction_metadata\": {\n    \"source_images_used\": [\n      \"tests/fixtures/blue.ppm\"\n    ],\n    \"color_source\": \"primary_color_field\",\n    \"extraction_timestamp\": \"2026-08-03T12:39:31.324136Z\",\n    \"appearance_extraction_method\": \"deterministic_image_metadata\"\n  }\n}"
+      }
+    },
+    {
+      "case": "normal_skin_care_serum",
+      "status_code": 200,
+      "request": {
+        "product": {
+          "category": "skin-care serum",
+          "core_selling_points": [
+            "durable construction",
+            "designed for daily use"
+          ],
+          "images": [
+            "tests/fixtures/green.ppm"
+          ],
+          "brand_name": "Tidal",
+          "logo_url": "tests/fixtures/green.ppm",
+          "primary_color": "#2455B4"
+        },
+        "target_markets": [
+          {
+            "market_code": "SG",
+            "language": "en"
+          },
+          {
+            "market_code": "DE",
+            "language": "de"
+          }
+        ],
+        "campaign_type": "social_post"
+      },
+      "response": {
+        "structured_input": {
+          "product": {
+            "category": "skin-care serum",
+            "core_selling_points": [
+              "durable construction",
+              "designed for daily use"
+            ],
+            "images": [
+              "tests/fixtures/green.ppm"
+            ],
+            "brand_name": "Tidal",
+            "logo_url": "tests/fixtures/green.ppm",
+            "primary_color": "#2455B4"
+          },
+          "target_markets": [
+            {
+              "market_code": "SG",
+              "language": "en"
+            },
+            {
+              "market_code": "DE",
+              "language": "de"
+            }
+          ],
+          "campaign_type": "social_post"
+        },
+        "anchor_block": {
+          "visual_anchors": {
+            "product_appearance": "Tidal skin-care serum. Preserve the exact silhouette, proportions, surface details, packaging geometry, and visible brand markings shown in 1 decoded product reference image(s). reference 1: PPM, 4x4, RGB, opaque, dominant colors #289664, #D2F0DC.",
+            "logo_reference": "tests/fixtures/green.ppm",
+            "color_palette": [
+              "#2455B4"
+            ]
+          },
+          "locked_attributes": [
+            "product_appearance",
+            "logo_reference",
+            "color_palette"
+          ],
+          "extraction_metadata": {
+            "source_images_used": [
+              "tests/fixtures/green.ppm"
+            ],
+            "color_source": "primary_color_field",
+            "extraction_timestamp": "2026-08-03T12:39:31.325603Z",
+            "appearance_extraction_method": "deterministic_image_metadata"
+          }
+        },
+        "warnings": [],
+        "agent_message": "You are running the AnchorReach structured campaign workflow. Create one static social post concept for each requested market: SG (en), DE (de). This phase does not apply market-specific style presets; treat market and language as explicit routing context only. Produce static image assets only. The AnchorBlock below is the source of truth: every attribute listed in locked_attributes must remain unchanged. Do not invent a logo when logo_reference is null. Use the product reference images when generating.\n\nSTRUCTURED_CAMPAIGN_INPUT:\n{\n  \"product\": {\n    \"category\": \"skin-care serum\",\n    \"core_selling_points\": [\n      \"durable construction\",\n      \"designed for daily use\"\n    ],\n    \"images\": [\n      \"tests/fixtures/green.ppm\"\n    ],\n    \"brand_name\": \"Tidal\",\n    \"logo_url\": \"tests/fixtures/green.ppm\",\n    \"primary_color\": \"#2455B4\"\n  },\n  \"target_markets\": [\n    {\n      \"market_code\": \"SG\",\n      \"language\": \"en\"\n    },\n    {\n      \"market_code\": \"DE\",\n      \"language\": \"de\"\n    }\n  ],\n  \"campaign_type\": \"social_post\"\n}\n\nANCHOR_BLOCK:\n{\n  \"visual_anchors\": {\n    \"product_appearance\": \"Tidal skin-care serum. Preserve the exact silhouette, proportions, surface details, packaging geometry, and visible brand markings shown in 1 decoded product reference image(s). reference 1: PPM, 4x4, RGB, opaque, dominant colors #289664, #D2F0DC.\",\n    \"logo_reference\": \"tests/fixtures/green.ppm\",\n    \"color_palette\": [\n      \"#2455B4\"\n    ]\n  },\n  \"locked_attributes\": [\n    \"product_appearance\",\n    \"logo_reference\",\n    \"color_palette\"\n  ],\n  \"extraction_metadata\": {\n    \"source_images_used\": [\n      \"tests/fixtures/green.ppm\"\n    ],\n    \"color_source\": \"primary_color_field\",\n    \"extraction_timestamp\": \"2026-08-03T12:39:31.325603Z\",\n    \"appearance_extraction_method\": \"deterministic_image_metadata\"\n  }\n}"
+      }
+    },
+    {
+      "case": "normal_travel_tumbler",
+      "status_code": 200,
+      "request": {
+        "product": {
+          "category": "travel tumbler",
+          "core_selling_points": [
+            "durable construction",
+            "designed for daily use"
+          ],
+          "images": [
+            "tests/fixtures/coral.ppm"
+          ],
+          "brand_name": "Emberline",
+          "logo_url": "tests/fixtures/green.ppm",
+          "primary_color": "#2455B4"
+        },
+        "target_markets": [
+          {
+            "market_code": "SG",
+            "language": "en"
+          },
+          {
+            "market_code": "DE",
+            "language": "de"
+          }
+        ],
+        "campaign_type": "ad_banner"
+      },
+      "response": {
+        "structured_input": {
+          "product": {
+            "category": "travel tumbler",
+            "core_selling_points": [
+              "durable construction",
+              "designed for daily use"
+            ],
+            "images": [
+              "tests/fixtures/coral.ppm"
+            ],
+            "brand_name": "Emberline",
+            "logo_url": "tests/fixtures/green.ppm",
+            "primary_color": "#2455B4"
+          },
+          "target_markets": [
+            {
+              "market_code": "SG",
+              "language": "en"
+            },
+            {
+              "market_code": "DE",
+              "language": "de"
+            }
+          ],
+          "campaign_type": "ad_banner"
+        },
+        "anchor_block": {
+          "visual_anchors": {
+            "product_appearance": "Emberline travel tumbler. Preserve the exact silhouette, proportions, surface details, packaging geometry, and visible brand markings shown in 1 decoded product reference image(s). reference 1: PPM, 4x4, RGB, opaque, dominant colors #E65A50, #FAF0E6.",
+            "logo_reference": "tests/fixtures/green.ppm",
+            "color_palette": [
+              "#2455B4"
+            ]
+          },
+          "locked_attributes": [
+            "product_appearance",
+            "logo_reference",
+            "color_palette"
+          ],
+          "extraction_metadata": {
+            "source_images_used": [
+              "tests/fixtures/coral.ppm"
+            ],
+            "color_source": "primary_color_field",
+            "extraction_timestamp": "2026-08-03T12:39:31.326901Z",
+            "appearance_extraction_method": "deterministic_image_metadata"
+          }
+        },
+        "warnings": [],
+        "agent_message": "You are running the AnchorReach structured campaign workflow. Create one static advertising banner concept for each requested market: SG (en), DE (de). This phase does not apply market-specific style presets; treat market and language as explicit routing context only. Produce static image assets only. The AnchorBlock below is the source of truth: every attribute listed in locked_attributes must remain unchanged. Do not invent a logo when logo_reference is null. Use the product reference images when generating.\n\nSTRUCTURED_CAMPAIGN_INPUT:\n{\n  \"product\": {\n    \"category\": \"travel tumbler\",\n    \"core_selling_points\": [\n      \"durable construction\",\n      \"designed for daily use\"\n    ],\n    \"images\": [\n      \"tests/fixtures/coral.ppm\"\n    ],\n    \"brand_name\": \"Emberline\",\n    \"logo_url\": \"tests/fixtures/green.ppm\",\n    \"primary_color\": \"#2455B4\"\n  },\n  \"target_markets\": [\n    {\n      \"market_code\": \"SG\",\n      \"language\": \"en\"\n    },\n    {\n      \"market_code\": \"DE\",\n      \"language\": \"de\"\n    }\n  ],\n  \"campaign_type\": \"ad_banner\"\n}\n\nANCHOR_BLOCK:\n{\n  \"visual_anchors\": {\n    \"product_appearance\": \"Emberline travel tumbler. Preserve the exact silhouette, proportions, surface details, packaging geometry, and visible brand markings shown in 1 decoded product reference image(s). reference 1: PPM, 4x4, RGB, opaque, dominant colors #E65A50, #FAF0E6.\",\n    \"logo_reference\": \"tests/fixtures/green.ppm\",\n    \"color_palette\": [\n      \"#2455B4\"\n    ]\n  },\n  \"locked_attributes\": [\n    \"product_appearance\",\n    \"logo_reference\",\n    \"color_palette\"\n  ],\n  \"extraction_metadata\": {\n    \"source_images_used\": [\n      \"tests/fixtures/coral.ppm\"\n    ],\n    \"color_source\": \"primary_color_field\",\n    \"extraction_timestamp\": \"2026-08-03T12:39:31.326901Z\",\n    \"appearance_extraction_method\": \"deterministic_image_metadata\"\n  }\n}"
+      }
+    }
+  ],
+  "fallback_path": {
+    "case": "fallback_no_logo_or_primary_color",
+    "status_code": 200,
+    "request": {
+      "product": {
+        "category": "travel tumbler",
+        "core_selling_points": [
+          "durable construction",
+          "designed for daily use"
+        ],
+        "images": [
+          "tests/fixtures/coral.ppm"
+        ],
+        "brand_name": "Emberline"
+      },
+      "target_markets": [
+        {
+          "market_code": "SG",
+          "language": "en"
+        },
+        {
+          "market_code": "DE",
+          "language": "de"
+        }
+      ],
+      "campaign_type": "poster"
+    },
+    "response": {
+      "structured_input": {
+        "product": {
+          "category": "travel tumbler",
+          "core_selling_points": [
+            "durable construction",
+            "designed for daily use"
+          ],
+          "images": [
+            "tests/fixtures/coral.ppm"
+          ],
+          "brand_name": "Emberline",
+          "logo_url": null,
+          "primary_color": null
+        },
+        "target_markets": [
+          {
+            "market_code": "SG",
+            "language": "en"
+          },
+          {
+            "market_code": "DE",
+            "language": "de"
+          }
+        ],
+        "campaign_type": "poster"
+      },
+      "anchor_block": {
+        "visual_anchors": {
+          "product_appearance": "Emberline travel tumbler. Preserve the exact silhouette, proportions, surface details, packaging geometry, and visible brand markings shown in 1 decoded product reference image(s). reference 1: PPM, 4x4, RGB, opaque, dominant colors #E65A50, #FAF0E6.",
+          "logo_reference": null,
+          "color_palette": [
+            "#E65A50",
+            "#FAF0E6"
+          ]
+        },
+        "locked_attributes": [
+          "product_appearance",
+          "color_palette"
+        ],
+        "extraction_metadata": {
+          "source_images_used": [
+            "tests/fixtures/coral.ppm"
+          ],
+          "color_source": "extracted_from_image",
+          "extraction_timestamp": "2026-08-03T12:39:31.327723Z",
+          "appearance_extraction_method": "deterministic_image_metadata"
+        }
+      },
+      "warnings": [],
+      "agent_message": "You are running the AnchorReach structured campaign workflow. Create one static poster concept for each requested market: SG (en), DE (de). This phase does not apply market-specific style presets; treat market and language as explicit routing context only. Produce static image assets only. The AnchorBlock below is the source of truth: every attribute listed in locked_attributes must remain unchanged. Do not invent a logo when logo_reference is null. Use the product reference images when generating.\n\nSTRUCTURED_CAMPAIGN_INPUT:\n{\n  \"product\": {\n    \"category\": \"travel tumbler\",\n    \"core_selling_points\": [\n      \"durable construction\",\n      \"designed for daily use\"\n    ],\n    \"images\": [\n      \"tests/fixtures/coral.ppm\"\n    ],\n    \"brand_name\": \"Emberline\",\n    \"logo_url\": null,\n    \"primary_color\": null\n  },\n  \"target_markets\": [\n    {\n      \"market_code\": \"SG\",\n      \"language\": \"en\"\n    },\n    {\n      \"market_code\": \"DE\",\n      \"language\": \"de\"\n    }\n  ],\n  \"campaign_type\": \"poster\"\n}\n\nANCHOR_BLOCK:\n{\n  \"visual_anchors\": {\n    \"product_appearance\": \"Emberline travel tumbler. Preserve the exact silhouette, proportions, surface details, packaging geometry, and visible brand markings shown in 1 decoded product reference image(s). reference 1: PPM, 4x4, RGB, opaque, dominant colors #E65A50, #FAF0E6.\",\n    \"logo_reference\": null,\n    \"color_palette\": [\n      \"#E65A50\",\n      \"#FAF0E6\"\n    ]\n  },\n  \"locked_attributes\": [\n    \"product_appearance\",\n    \"color_palette\"\n  ],\n  \"extraction_metadata\": {\n    \"source_images_used\": [\n      \"tests/fixtures/coral.ppm\"\n    ],\n    \"color_source\": \"extracted_from_image\",\n    \"extraction_timestamp\": \"2026-08-03T12:39:31.327723Z\",\n    \"appearance_extraction_method\": \"deterministic_image_metadata\"\n  }\n}"
+    }
+  },
+  "blocking_paths": [
+    {
+      "case": "missing_required_category",
+      "status_code": 422,
+      "request": {
+        "product": {
+          "core_selling_points": [
+            "durable construction",
+            "designed for daily use"
+          ],
+          "images": [
+            "tests/fixtures/blue.ppm"
+          ],
+          "brand_name": "Northstar",
+          "logo_url": "tests/fixtures/green.ppm",
+          "primary_color": "#2455B4"
+        },
+        "target_markets": [
+          {
+            "market_code": "SG",
+            "language": "en"
+          },
+          {
+            "market_code": "DE",
+            "language": "de"
+          }
+        ],
+        "campaign_type": "poster"
+      },
+      "response": {
+        "error": {
+          "code": "structured_input_validation_failed",
+          "message": "Structured input was rejected; generation did not start.",
+          "fields": [
+            {
+              "field": "product.category",
+              "reason": "Field required",
+              "type": "missing"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "unreachable_image_path",
+      "status_code": 422,
+      "request": {
+        "product": {
+          "category": "wireless earbuds",
+          "core_selling_points": [
+            "durable construction",
+            "designed for daily use"
+          ],
+          "images": [
+            "/definitely/missing/product.png"
+          ],
+          "brand_name": "Northstar",
+          "logo_url": "tests/fixtures/green.ppm",
+          "primary_color": "#2455B4"
+        },
+        "target_markets": [
+          {
+            "market_code": "SG",
+            "language": "en"
+          },
+          {
+            "market_code": "DE",
+            "language": "de"
+          }
+        ],
+        "campaign_type": "poster"
+      },
+      "response": {
+        "error": {
+          "code": "anchor_extraction_failed",
+          "message": "Structured input was rejected; generation did not start.",
+          "fields": [
+            {
+              "field": "product.images.0",
+              "reason": "local file does not exist: /definitely/missing/product.png",
+              "type": "image_validation_error"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "more_than_three_markets",
+      "status_code": 422,
+      "request": {
+        "product": {
+          "category": "wireless earbuds",
+          "core_selling_points": [
+            "durable construction",
+            "designed for daily use"
+          ],
+          "images": [
+            "tests/fixtures/blue.ppm"
+          ],
+          "brand_name": "Northstar",
+          "logo_url": "tests/fixtures/green.ppm",
+          "primary_color": "#2455B4"
+        },
+        "target_markets": [
+          {
+            "market_code": "SG",
+            "language": "en"
+          },
+          {
+            "market_code": "DE",
+            "language": "en"
+          },
+          {
+            "market_code": "AE",
+            "language": "en"
+          },
+          {
+            "market_code": "US",
+            "language": "en"
+          }
+        ],
+        "campaign_type": "poster"
+      },
+      "response": {
+        "error": {
+          "code": "structured_input_validation_failed",
+          "message": "Structured input was rejected; generation did not start.",
+          "fields": [
+            {
+              "field": "target_markets",
+              "reason": "List should have at most 3 items after validation, not 4",
+              "type": "too_long"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "invalid_campaign_type",
+      "status_code": 422,
+      "request": {
+        "product": {
+          "category": "wireless earbuds",
+          "core_selling_points": [
+            "durable construction",
+            "designed for daily use"
+          ],
+          "images": [
+            "tests/fixtures/blue.ppm"
+          ],
+          "brand_name": "Northstar",
+          "logo_url": "tests/fixtures/green.ppm",
+          "primary_color": "#2455B4"
+        },
+        "target_markets": [
+          {
+            "market_code": "SG",
+            "language": "en"
+          },
+          {
+            "market_code": "DE",
+            "language": "de"
+          }
+        ],
+        "campaign_type": "video"
+      },
+      "response": {
+        "error": {
+          "code": "structured_input_validation_failed",
+          "message": "Structured input was rejected; generation did not start.",
+          "fields": [
+            {
+              "field": "campaign_type",
+              "reason": "Input should be 'poster', 'social_post' or 'ad_banner'",
+              "type": "enum"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-08-04",
+  "project": "AnchorReach",
+  "framework_baseline": "Anil-matcha/Open-AI-Design-Agent",
+  "creative_lab_code_or_data_used": false,
+  "verified": {
+    "backend_tests_passed": 42,
+    "backend_tests_failed": 0,
+    "design_agent_component_build": "passed",
+    "nextjs_production_build": "passed",
+    "real_muapi_generation_requests": 2,
+    "real_generated_assets": 1,
+    "real_muapi_spend_usd": 0.18,
+    "valid_independent_openai_judge_reports": 1,
+    "independent_judge_estimated_cost_usd": 0.007741,
+    "curated_market_presets": 5,
+    "maximum_markets_per_campaign": 3,
+    "public_product_sources_verified": 12,
+    "public_logo_sources_verified": 8,
+    "frozen_evaluation_samples": 60,
+    "frozen_human_raters": 2
+  },
+  "unvalidated": {
+    "judge_trusted": false,
+    "pearson": null,
+    "spearman": null,
+    "human_ratings_collected": 0,
+    "model_holdout_scores_collected": 0,
+    "paid_customers": null,
+    "revenue_usd": null,
+    "conversion_rate": null,
+    "retention_rate": null,
+    "validated_markets": []
+  },
+  "calibration_only": {
+    "automated_score": 93.4,
+    "role": "rubric_disagreement_case_not_performance_evidence"
+  },
+  "financial_gate": {
+    "paid_phase6_collection_authorized": false,
+    "phase6_base_estimate_usd": 5.86446,
+    "phase6_recommended_cap_usd": [6.5, 7.0]
+  }
+}

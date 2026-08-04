@@ -1,0 +1,102 @@
+{
+  "stage": 3,
+  "recorded_at": "2026-08-04T06:03:52Z",
+  "source_boundary": {
+    "framework_baseline": "Anil-matcha/Open-AI-Design-Agent",
+    "creative_lab_code_or_data_used": false
+  },
+  "automated_verification": {
+    "status": "passed",
+    "backend_tests": {
+      "passed": 28,
+      "failed": 0
+    },
+    "frontend_component_build": "passed",
+    "covered_behaviors": [
+      "locked-dimension scoring",
+      "logo-absent weight normalization",
+      "overall and per-dimension pass gates",
+      "maximum-three-attempt retry policy",
+      "explainable API report",
+      "provider failure without fabricated score",
+      "MuAPI live text-field and provider-result URL parsing",
+      "Pearson and tie-aware Spearman calculation",
+      "minimum-sample and correlation trust gates",
+      "locked-logo hard-failure score cap with raw-score auditability"
+    ]
+  },
+  "scoring_policy_v2": {
+    "status": "implemented_and_locally_verified_not_paid_retested",
+    "policy_version": "logo_hard_gate_v2",
+    "calibration_sample_excluded_from_final_validation": "wikimedia-bottle-sg-social-v1",
+    "logo_hard_failure_score_cap": 59.0,
+    "hard_failure_categories": [
+      "core_color_changed",
+      "mark_structure_changed",
+      "brand_wording_changed",
+      "reference_mark_missing",
+      "invented_brand_mark"
+    ],
+    "audit_behavior": "The report preserves the raw judge score and separately exposes the policy-adjusted score, hard-gate flag, codes, and visible reasons.",
+    "spend_usd": 0.0
+  },
+  "independent_judge_migration": {
+    "status": "implemented_and_real_call_completed",
+    "provider": "openai_responses_vision",
+    "model": "gpt-5.4-mini",
+    "generation_provider_unchanged": "muapi",
+    "default_paid_call_limit_usd": 0,
+    "current_code_ceiling_usd": 0.02,
+    "openai_api_key_present_in_project_env": true,
+    "reason": "The adapter returned one valid structured report from OpenAI within the approved cost ceiling. The technical provider migration is complete; score trust calibration remains open because the first sample exposed a manual/logo-score disagreement."
+  },
+  "real_api_closed_loop": {
+    "status": "technical_loop_completed_judge_trust_not_yet_validated",
+    "reason": "The base Design Agent produced a real static asset and the independent OpenAI judge returned a valid structured report. The automated pass conflicts with the manual strict-logo interpretation, so technical closure is achieved but judge trust is not claimed.",
+    "metrics": {
+      "key_validation": "passed",
+      "starting_balance_usd": 10.0,
+      "ending_balance_usd": 9.82,
+      "approved_cap_usd": 0.2,
+      "actual_spend_usd": 0.18,
+      "generation_requests_started": 2,
+      "generated_assets_returned": 1,
+      "judge_requests_started": 3,
+      "judge_actual_spend_usd": 0.0,
+      "judge_valid_reports_returned": 1,
+      "independent_judge_model": "gpt-5.4-mini",
+      "independent_judge_input_tokens": 6745,
+      "independent_judge_output_tokens": 596,
+      "independent_judge_estimated_cost_usd": 0.007741,
+      "independent_judge_approved_cap_usd": 0.02
+    }
+  },
+  "public_acceptance_sample": {
+    "sample_id": "wikimedia-bottle-sg-social-v1",
+    "status": "automated_pass_manual_logo_disagreement_observed",
+    "generated_asset_url": "https://cdn.muapi.ai/outputs/generated/20218135517c46738254af3b73f8799f.png",
+    "generation_model": "gpt-image-2-image-to-image",
+    "source_urls_reachable": true,
+    "structured_input_status": 200,
+    "locked_attributes": [
+      "product_appearance",
+      "logo_reference",
+      "color_palette"
+    ],
+    "color_palette": [
+      "#1688D4"
+    ],
+    "warnings": [],
+    "manual_review_is_not_model_score": true
+  },
+  "judge_trust_validation": {
+    "status": "pilot_disagreement_observed_full_validation_not_run",
+    "minimum_samples": 20,
+    "pearson_required_exclusive": 0.8,
+    "spearman_required_exclusive": 0.8,
+    "pearson": null,
+    "spearman": null,
+    "trusted": null,
+    "reason": "One valid v1 calibration report exists, but it scored logo_reference 96 while also noting that the locked logo's exact color treatment changed. Policy v2 now contains a deterministic hard gate; trust remains unclaimed until it is evaluated on at least 20 new blind holdout samples."
+  }
+}

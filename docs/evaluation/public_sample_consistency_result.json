@@ -1,0 +1,91 @@
+{
+  "sample_id": "wikimedia-bottle-sg-social-v1",
+  "asset_url": "https://cdn.muapi.ai/outputs/generated/20218135517c46738254af3b73f8799f.png",
+  "started_at": "2026-08-04T06:03:41.657133Z",
+  "judge_provider": "openai_responses_vision",
+  "approved_judge_cap_usd": 0.02,
+  "status": "passed",
+  "estimated_api_cost_usd": 0.007741,
+  "completed_at": "2026-08-04T06:03:52.897780Z",
+  "result": {
+    "report": {
+      "report_id": "cr_772cbdd873ba4f88a89b287332e67083",
+      "attempt_number": 1,
+      "overall_score": 93.4,
+      "pass_threshold": 80.0,
+      "minimum_dimension_score": 60.0,
+      "passed": true,
+      "dimensions": [
+        {
+          "dimension": "product_appearance",
+          "score": 94.0,
+          "weight": 0.5,
+          "passed": true,
+          "evidence": [
+            "Generated asset shows a single blue reusable bottle with a similar cylindrical body, short threaded neck, rounded shoulders, and flat-ish capped top.",
+            "The bottle front includes a centered white Wikimedia-style mark placed on the main body, matching the reference’s prominent brand marking location and general purpose.",
+            "Overall silhouette and proportions are close to the reference bottle demo, with a tall narrow form and simple packaging-like product presentation."
+          ],
+          "discrepancies": [
+            "The lower body shape is smoother and more rounded than the reference silhouette, which has a more faceted/pixelated contour and stronger geometric edges.",
+            "The cap/neck transition and shoulder geometry differ: the generated bottle has a more natural curved shoulder, while the reference appearance is more blocky and stylized.",
+            "Surface detail is not preserved exactly; the generated asset adds realistic shading and texture on top of the bottle, whereas the reference is a flatter, more icon-like bottle silhouette with transparent background."
+          ]
+        },
+        {
+          "dimension": "logo_reference",
+          "score": 96.0,
+          "weight": 0.3,
+          "passed": true,
+          "evidence": [
+            "The logo on the bottle body closely matches the dedicated Wikimedia mark: blue circular arc motif, central vertical form, and white figure-like elements are present in the generated asset.",
+            "A separate Wikimedia Foundation logo also appears in the top-right, reinforcing brand alignment and matching the visible mark family.",
+            "The main body logo is centered and scaled in a way that preserves the basic logo structure and recognizability."
+          ],
+          "discrepancies": [
+            "The bottle mark appears as a white-on-blue rendering rather than the exact colored logo treatment shown in the reference logo image.",
+            "The top-right logo includes accompanying wordmark text that is not part of the dedicated logo image itself, though the icon shape remains consistent.",
+            "Minor differences in line thickness, spacing, and curvature are visible compared with the reference logo."
+          ]
+        },
+        {
+          "dimension": "color_palette",
+          "score": 88.0,
+          "weight": 0.2,
+          "passed": true,
+          "evidence": [
+            "The asset strongly features the locked blue brand color across the bottle, typography, and logo elements.",
+            "The bottle body and cap are dominated by a saturated blue closely aligned with the supplied palette color family.",
+            "White is used as a secondary support color for the logo and background, keeping the overall brand look clean and blue-forward."
+          ],
+          "discrepancies": [
+            "The generated asset introduces additional tones and gradients beyond the locked blue, including lighter highlights, shadows, and near-white background/ground colors.",
+            "The bottle texture contains multiple blue shades and speckled variations, so the palette is not strictly limited to the single locked color.",
+            "Background and shadow treatment add colors not present in the locked palette, so the exact palette preservation is incomplete."
+          ]
+        }
+      ],
+      "summary": "The generated advertising asset preserves the main product identity well: it is clearly the Wikimedia-style reusable bottle with a matching blue brand presentation and recognizable logo placement. However, it does not exactly preserve the reference bottle’s simplified silhouette and surface geometry, and it expands the palette with realistic shading and background tones beyond the locked color.",
+      "judge_metadata": {
+        "provider": "openai_responses_vision",
+        "model": "gpt-5.4-mini",
+        "evaluated_at": "2026-08-04T06:03:52.897474Z",
+        "latency_ms": 11240,
+        "reference_images_used": [
+          "https://upload.wikimedia.org/wikipedia/commons/9/9b/Wikimedia-bottle.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/500px-Wikimedia-logo.svg.png",
+          "https://cdn.muapi.ai/outputs/generated/20218135517c46738254af3b73f8799f.png"
+        ],
+        "generated_asset_url": "https://cdn.muapi.ai/outputs/generated/20218135517c46738254af3b73f8799f.png",
+        "raw_response_sha256": "66241e42b917ac2f8314e9613ecc8cefc5b9dbeb7f725123cf5e1b24a338d426",
+        "input_tokens": 6745,
+        "output_tokens": 596,
+        "estimated_cost_usd": 0.007741,
+        "configured_cost_limit_usd": 0.02
+      }
+    },
+    "should_regenerate": false,
+    "attempts_remaining": 2,
+    "regeneration_instruction": null
+  }
+}

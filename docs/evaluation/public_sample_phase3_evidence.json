@@ -1,0 +1,114 @@
+{
+  "stage": 3,
+  "sample_id": "wikimedia-bottle-sg-social-v1",
+  "recorded_at": "2026-08-04T06:03:52Z",
+  "status": "generation_and_independent_judge_completed_manual_disagreement_observed",
+  "source_boundary": {
+    "framework_baseline": "Anil-matcha/Open-AI-Design-Agent",
+    "creative_lab_code_or_data_used": false
+  },
+  "spend": {
+    "approved_cap_usd": 0.2,
+    "starting_balance_usd": 10.0,
+    "ending_balance_usd": 9.82,
+    "actual_total_spend_usd": 0.18,
+    "independent_judge_approved_cap_usd": 0.02,
+    "independent_judge_estimated_cost_usd": 0.007741,
+    "combined_actual_and_estimated_spend_usd": 0.187741,
+    "cap_exceeded": false
+  },
+  "reference_uploads": {
+    "status": "completed",
+    "product_asset_url": "https://cdn.muapi.ai/data/133061/226716160352/Wikimedia-bottle.png",
+    "logo_asset_url": "https://cdn.muapi.ai/data/133061/620205001066/500px-Wikimedia-logo.svg.png",
+    "charged_usd": 0.0
+  },
+  "generation_attempts": [
+    {
+      "attempt": 1,
+      "session_id": "93df335f-1d7d-4954-ab13-2806b813c6d4",
+      "job_id": "64c73f30-039b-4b0d-8c60-9d14363a39b4",
+      "plan_nodes": 1,
+      "plan_total_credits": 5,
+      "status": "cancelled_after_provider_timeout",
+      "asset_returned": false,
+      "actual_spend_usd": 0.09
+    },
+    {
+      "attempt": 2,
+      "session_id": "a2885cbb-fd31-4487-9ae9-febc9f579db4",
+      "job_id": "8392a41b-d8fe-48b3-8311-c5466b374e91",
+      "plan_nodes": 1,
+      "plan_total_credits": 10,
+      "status": "completed",
+      "model": "gpt-image-2-image-to-image",
+      "generated_asset_url": "https://cdn.muapi.ai/outputs/generated/20218135517c46738254af3b73f8799f.png",
+      "asset_dimensions": "2048x2048",
+      "actual_spend_usd": 0.09
+    }
+  ],
+  "judge_attempts": [
+    {
+      "request_id": "3cc0a940-13fd-4756-8791-f8574acb69d6",
+      "model": "google/gemini-2.5-flash",
+      "provider_status": "completed",
+      "contract_status": "invalid_placeholder_output",
+      "actual_spend_usd": 0.0
+    },
+    {
+      "request_id": "2e0ab851-934c-40e6-993a-fe44300f0698",
+      "model": "google/gemini-2.5-flash",
+      "provider_status": "completed",
+      "contract_status": "invalid_placeholder_output",
+      "actual_spend_usd": 0.0
+    },
+    {
+      "request_id": "4cd66c52-b262-4349-a511-d4844af86581",
+      "model": "google/gemini-2.5-flash",
+      "provider_status": "completed",
+      "contract_status": "invalid_placeholder_output",
+      "actual_spend_usd": 0.0
+    }
+  ],
+  "judge_result": {
+    "status": "blocked_provider_response_contract",
+    "overall_score": null,
+    "passed": null,
+    "reason": "MuAPI marked each OpenRouter Vision request completed but returned the generic any-llm-models.jpg placeholder instead of the documented generated text. No score was fabricated."
+  },
+  "independent_rejudge": {
+    "status": "completed_automated_pass_manual_logo_disagreement",
+    "provider": "openai_responses_vision",
+    "model": "gpt-5.4-mini",
+    "approved_cap_usd": 0.02,
+    "estimated_cost_usd": 0.007741,
+    "input_tokens": 6745,
+    "output_tokens": 596,
+    "latency_ms": 11240,
+    "overall_score": 93.4,
+    "passed": true,
+    "dimension_scores": {
+      "product_appearance": 94.0,
+      "logo_reference": 96.0,
+      "color_palette": 88.0
+    },
+    "reason": "The independent API returned a valid structured report in one call. It passed the asset while explicitly noting that the locked logo's exact color treatment was not preserved, which conflicts with the manual strict-lock interpretation and requires calibration before the judge can be called trustworthy."
+  },
+  "scoring_policy_v2": {
+    "status": "implemented_after_v1_calibration_not_applied_retroactively",
+    "policy_version": "logo_hard_gate_v2",
+    "sample_role": "calibration_only_excluded_from_final_blind_validation",
+    "logo_hard_failure_score_cap": 59.0,
+    "raw_v1_result_preserved": true,
+    "paid_retest_run": false,
+    "additional_spend_usd": 0.0,
+    "reason": "The v1 disagreement motivated a pre-validation rubric clarification. This stored 93.4 result remains the original v1 output and will not be rewritten as a v2 result."
+  },
+  "manual_visual_review": {
+    "is_model_judge_substitute": false,
+    "product_appearance": "The bottle silhouette and puzzle-pattern surface remain recognizable, but the flat reference was converted into a three-dimensional studio rendering with altered cap/neck shading and perspective.",
+    "logo_reference": "The generated top-right mark is a monochrome blue Wikimedia Foundation wordmark and the bottle mark is white; neither preserves the supplied red/green/blue standalone logo exactly.",
+    "color_palette": "The blue anchor is dominant and visually consistent with the requested #1688D4 family.",
+    "qualitative_conclusion": "The automated judge scored logo_reference 96 despite acknowledging that the exact color treatment was not preserved. This is a real human/model rubric disagreement; the valid API response proves the technical loop, but the judge is not yet validated as trustworthy."
+  }
+}

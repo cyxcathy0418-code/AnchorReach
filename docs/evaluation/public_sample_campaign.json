@@ -1,0 +1,43 @@
+{
+  "sample_id": "wikimedia-bottle-sg-social-v1",
+  "purpose": "Phase-3 real API closed-loop acceptance sample",
+  "structured_input": {
+    "product": {
+      "category": "reusable water bottle",
+      "core_selling_points": [
+        "Reusable everyday hydration",
+        "Lightweight bottle silhouette",
+        "Recognizable three-color Wikimedia mark"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/Wikimedia-bottle.png"
+      ],
+      "brand_name": "Wikimedia Bottle Demo",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/500px-Wikimedia-logo.svg.png",
+      "primary_color": "#1688D4"
+    },
+    "target_markets": [
+      {
+        "market_code": "SG",
+        "language": "en"
+      }
+    ],
+    "campaign_type": "social_post"
+  },
+  "expected_locked_attributes": [
+    "product_appearance",
+    "logo_reference",
+    "color_palette"
+  ],
+  "acceptance_policy": {
+    "pass_threshold": 80,
+    "minimum_dimension_score": 60,
+    "maximum_total_attempts": 3
+  },
+  "source_notes": {
+    "product_image_page": "https://commons.wikimedia.org/wiki/File:Wikimedia-bottle.png",
+    "product_image_license": "CC0 1.0 Universal Public Domain Dedication",
+    "logo_page": "https://commons.wikimedia.org/wiki/File:Wikimedia-logo.svg",
+    "logo_note": "Public-domain copyright status; Wikimedia trademark and visual identity rules still apply. This sample is used only for local technical validation."
+  }
+}
