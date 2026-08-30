@@ -102,9 +102,3 @@ Paid judge calls are disabled by default. Never commit `server/.env`; use the ch
 | Independent judge | `server/app/services/openai_vision_judge.py` |
 | Structured UI | `packages/design-agent/src/components/StructuredCampaignForm.jsx` |
 | Evaluation artifacts | `docs/evaluation/` and `outputs/` |
-
-## Attribution and source boundary
-
-AnchorReach is based on [Anil-matcha/Open-AI-Design-Agent](https://github.com/Anil-matcha/Open-AI-Design-Agent) under the MIT License. The upstream Agent loop and MuAPI integration remain the framework baseline.
-
-Creative Lab was used only as product inspiration. Its code and data were not used in this repository.
