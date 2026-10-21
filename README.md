@@ -102,3 +102,4 @@ Paid judge calls are disabled by default. Never commit `server/.env`; use the ch
 | Independent judge | `server/app/services/openai_vision_judge.py` |
 | Structured UI | `packages/design-agent/src/components/StructuredCampaignForm.jsx` |
 | Evaluation artifacts | `docs/evaluation/` and `outputs/` |
+
